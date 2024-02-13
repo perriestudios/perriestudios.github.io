@@ -4,7 +4,7 @@ description         : >-
                       Engineering Synergy Between Hardware :gear: and Software :technologist: since 2017
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : perriestudios/perriestudios.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : perriestudios/perriestudios.github.io
+remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -18,17 +18,17 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-
+  - documentation/partials/**                           # For Documentation Only
 
 
 ### Author Info ###
 author:
   name              : Pranav S Murali
-  image             : /_data/lhc.jpg
-# behance           : your_username
+  image             : https://i.imgur.com/uyDNQnn.jpg #https://github.com/perriestudios/perriestudios.github.io/blob/main/_data/lhc.jpg
+#  behance           : your_username
 # dribbble          : your_username
   email             : pranav.srinivas.murali@gmail.com
-# facebook          : your_username
+# facebook          : perriestudios
   github            : perriestudios
 # gitlab            : your_username
 # instagram         : your_username
@@ -40,7 +40,7 @@ author:
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-# twitter           : your_username
+#  twitter           : your_username
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
@@ -55,6 +55,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
+  elements:                                             # For Documentation Only
+    output: true                                        # For Documentation Only
+
 
 ### Disqus ###
 disqus:
@@ -85,6 +88,11 @@ defaults:
       type: "projects"
     values:
       layout: "page"
+  - scope:                                              # For Documentation Only
+      path: ""                                          # For Documentation Only
+      type: "elements"                                  # For Documentation Only
+    values:                                             # For Documentation Only
+      layout: "element"                                 # For Documentation Only
   - scope:
       path: ""
       type: "posts"
@@ -98,3 +106,4 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+  - vendor
