@@ -18,13 +18,14 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
+  - _elements/
   - documentation/partials/**                           # For Documentation Only
 
 
 ### Author Info ###
 author:
   name              : Pranav S Murali
-  image             : https://drive.google.com/file/d/1fuj0iTP8Ub4JygC9-xXJ8Q1eNmIx5Mz1/view?usp=sharing
+  image             : custom/lhc.jpg
 #  behance           : your_username
 # dribbble          : your_username
   email             : pranav.srinivas.murali@gmail.com
@@ -88,11 +89,6 @@ defaults:
       type: "projects"
     values:
       layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "elements"                                  # For Documentation Only
-    values:                                             # For Documentation Only
-      layout: "element"                                 # For Documentation Only
   - scope:
       path: ""
       type: "posts"

@@ -1,17 +1,30 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Member of Scientific Personnel, CERN
+  from: June 2023
+  to: Sept. 2023
+  description: Implemented an algorithm to overcome data desynchronization between the on-detector front-end ASICs and off-detector FPGA readout systems in the Large Hadron Collider (LHC).
 
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Master of Science in Electrical Engineering, University of Washington
+  from: Sept. 2022
+  to: June 2024
+  description: Coursework - Computer Architecture I, Computer Architecture II, High-Performance Computer Architecture, Introduction to VLSI, ASIC Design, Capstone Integrated Digital Design Projects, Automatic Layout of ICs and AI for Engineers. 
+
+- title: Senior Application Engineer, ION Energy (now Maxwell Energy Systems)
+  from: July 2021
+  to: Aug. 2022
+  description: Managed 3 key customers - Tork Motors, Ox Power, and ETO Motors with the design of a suitable Battery Management System (BMS) for Electric Vehicles. Independently drove a project to completion which resulted in the largest Purchase Order received for an off-the-shelf product of ION Energy at that time. Automated a process of BMS Configuration Review by creating a Python tool that reduced customer activation time by 60%.
+
+
+- title: Embedded Systems Consultant, Self-Employed
+  from: June 2020
+  to: July 2021
+  description: Designed the electronics for commercial and consumer products Smart Batter, Aerem (now Climec labs), and Seabike for three early-stage startups.
+
+- title: Intern at Engineering Development Group, Mathworks
+  from: Jan 2020
+  to: May 2020
+  description: Worked with ROS Toolbox Development Team tom implement the MATLAB function rosgenmsg in C++, fixed existing bugs within the toolbox
+  
+- title: Bachelor of Technology, SRM Institute of Science and Technology
+  from: Aug. 2016
+  to: June 2020
+  description: Electronics and Communication Engineering
