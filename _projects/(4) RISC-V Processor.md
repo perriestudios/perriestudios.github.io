@@ -5,6 +5,23 @@ image: /riscv.png
 description: Designed a 5-stage pipelined RISC-V microprocessor with UART interface using Verilog. Implemented the complete instruction set of RV32I and deployed on an ARTY-A7 100T FPGA running at 100 MHz.
 ---
 
+## Index
+
+- [Specifications](#specifications)
+- [Fetch](#fetch)
+- [Instruction Memory](#instruction-memory)
+- [Decode](#decode)
+- [Register File](#register-file)
+- [Execute](#execute)
+- [ALU](#alu)
+- [Load Store](#load-store)
+- [Hazard](#hazard-unit)
+- [CPU](#top-level)
+- [Verification](#verification)
+- [Sample Assembly Program](#sample-assembly-program)
+
+---
+
 ## Specifications
 
 - Pipeline Stages - Fetch, Decode, Execute, Load-Store, Writeback
@@ -16,6 +33,8 @@ description: Designed a 5-stage pipelined RISC-V microprocessor with UART interf
 - 32 registers (As given in RISC-V ISA)
 - Handles Data, Structural, and Control Hazards
 - Static Branch Prediction - Assumes the branch is never taken
+
+---
 
 ## Fetch
 
@@ -63,8 +82,9 @@ module ifu(
         end
 endmodule
 ```
+---
 
-## Program Memory
+## Instruction Memory
 
 - Implemented a 4KB Asynchronous ROM
 - Vivado can synthesize an initial block if it's RAM
@@ -89,6 +109,7 @@ module programMemory(
 
 endmodule
 ```
+---
 
 ## Decode
 
@@ -151,6 +172,8 @@ always_comb
         end
 ```
 
+---
+
 ## Register File
 
 - 32 Registers of 32-bits as specified by the ISA
@@ -209,6 +232,8 @@ module registerFile(
     end
 endmodule
 ```
+
+---
 
 ## Execute
 
@@ -271,6 +296,8 @@ module execute(
 endmodule
 ```
 
+---
+
 ## ALU
 
 Does arithmetic and logic instructions
@@ -317,7 +344,9 @@ always_comb
 endmodule
 ```
 
-## Data Memory
+---
+
+## Load Store
 
 - 4KB Synchronous 1RW SRAM
 - Inferred Block RAM
@@ -371,6 +400,8 @@ module dataMemory(
     end
 endmodule
 ```
+
+---
 
 ## Hazard Unit
 
@@ -516,6 +547,8 @@ module hazardUnit(
 endmodule
 ```
 
+---
+
 ## Top Level
 
 All the modules are wired together
@@ -642,6 +675,8 @@ module cpu(
 endmodule
 ```
 
+---
+
 ## Verification
 
 - Wrote directed testbenches for each module in the processor
@@ -650,6 +685,8 @@ endmodule
 - Analyzed waveforms using the Vivado waveform viewer
 
 ![Vivado Waveform](/riscv.png)
+
+---
 
 ## Sample Assembly Program
 

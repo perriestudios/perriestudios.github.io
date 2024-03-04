@@ -13,12 +13,16 @@ description: Designed a lightweight helper thread for the RISC-V Vanilla core us
 - For this project, the helper thread will only execute integer instructions
 - We started by identifying the conditions for core stalls
 
+---
+
 ## Helper Thread Invoking
 
 - Two fundamental stall signals in the RTL are stall_all and stall_id
 - stall_all is used to stall all the stages of the pipeline
 - stall_id is used to stall only instruction decode unit and associated components
 - Helper thread will be invoked when stall_all is enabled since execute unit will not stall with stall_id
+
+---
 
 ## Pipeline Resource Utilization
 
@@ -30,6 +34,8 @@ description: Designed a lightweight helper thread for the RISC-V Vanilla core us
 - Execute Units: Separate ALUs
 - LSUs, memory and write back will be reused
 
+---
+
 ## Arbitration Logic for PC
 
 - Vanilla Core should be initialized with two program counters
@@ -38,11 +44,15 @@ description: Designed a lightweight helper thread for the RISC-V Vanilla core us
 - Switching between PC1 and PC2 will be based on the stall_all signal
 - This logic was implemented inside the icache.v
 
+---
+
 ## Arbitration Logic for Operand Storage
 
 - Additional registers  need to be included to hold the state of the operands to be passed onto the execute units
 - Since the stall scenarios are rather unpredictable, it is not wise to overwrite the operands of main thread with helper thread by reuse
 - Register file to the flip flop path is switched using stall_all input
+
+---
 
 ## Summary of RTL Changes
 
@@ -52,6 +62,8 @@ description: Designed a lightweight helper thread for the RISC-V Vanilla core us
 - Added switching logic for the main and helper ALU results based on the stall_main signal
 - Added arbitration logic for shared Decode, Memory Units
 - Added new stalls pertinent to helper thread
+
+---
 
 ## Assembly Program for Test
 

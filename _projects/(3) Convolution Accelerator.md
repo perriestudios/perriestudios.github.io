@@ -16,11 +16,15 @@ description: A massively parallel 2D convolution hardware accelerator targeted a
 - [Optimizations](#optimizations)
 - [Results](#results)
 
+---
+
 ## Ideation
 
 The main goal of the project is to design a scalable macro that can be used for accelerating convolution computations. This would prove useful for running inference on the edge requiring convolution compute at the best Power, Performance and Area.
 
 The compute in convolutions are inherently are very repetitive and would be excellent candidates for SIMT machines. The goal here is to build a super efficient SIMT machine optimized for convolution.
+
+---
 
 ## Microarchitecture
 
@@ -37,6 +41,8 @@ The compute in convolutions are inherently are very repetitive and would be exce
 
 **Memory:**
 - SRAM for fast access
+
+---
 
 ### RTL Design
 
@@ -382,6 +388,8 @@ module tb_dut (
 endmodule
 ```
 
+---
+
 ## Synthesis and APR
 
 - Used Synopsys Design Compiler for Synthesis on FreePDK45
@@ -591,6 +599,8 @@ connect_net VSS [get_pins -all genblk1_0__ram/gnd]
 
 ![Convolution Matrix](/convolutionMatrix.png)
 
+---
+
 ## Optimizations
 
 
@@ -619,6 +629,8 @@ always_latch
 **Area Optimization: Floorplanning**
 
 - Explored different floorplanning configurations to arrive at the best possible area. 
+
+---
 
 ## Results
 
